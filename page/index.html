@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1,user-scalable=no">
+<title>家庭预存有礼，最高得4999元现金</title>
+<link rel="stylesheet" href="../style/base.css">
+<style>
+body {
+	background:#d31315 url(../style/1/img/bg.jpg) center 0 no-repeat;
+	background-size:375px;
+}
+.btn.dark,.btn.submit {
+	background-color:#d31315;
+}
+#topbar {
+	position:absolute;left:0;right:0;top:0;
+	padding:16px;
+	display:-webkit-flex;display:flex;
+	max-width:414px;margin:0 auto;
+}
+#topbar .logo {
+	width:77px;height:24px;
+	background:url(../style/1/img/logo.png) 0 0 no-repeat;
+	background-size:100%;
+}
+#topbar .links {
+	-webkit-flex:1;flex:1;
+	text-align:right;
+}
+#topbar .links .btn {
+	display:inline-block;
+	width:60px;height:24px;line-height:24px;
+	box-shadow:0 1px 0 rgba(0,0,0,.12);
+	border:none;
+	margin-left:8px;
+}
+#topbar .links .btn>em {font-size:12px;}
+#topbar .links .btn.dark {background-color:#ffcf0b;}
+#topbar .links .btn.my {color:#d31315;}
+
+#header {
+	padding:56px 0 16px;
+	background:url(../style/1/img/header_bg.png) center 16px no-repeat;
+	background-size:375px;
+	min-height:180px;
+}
+#header>h1 {
+	width:320px;height:100px;
+	background:url(../style/1/img/header_title.png) center center no-repeat;
+	background-size:100%;
+	text-indent:-9999px;
+	margin:0 auto;
+}
+.term_date {
+	width:220px;height:24px;line-height:22px;
+	text-align:center;
+	border:1px solid rgba(255,255,255,.8);
+	border-radius:24px;
+	margin:0 auto 0;
+	font-size:14px;font-weight:700;
+	color:#fff;
+}
+#footer {
+
+	height:100px;
+	background:url(../style/1/img/bottom_bg.png) center 0 no-repeat;
+	background-size:375px;
+	position:fixed;left:0;right:0;bottom:0;
+}
+#main {padding-top:16px;}
+.dial {
+	position:relative;
+	width:320px;height:320px;margin:0 auto;
+	background:url(../style/1/img/dial_bg.png) center center no-repeat;
+	background-size:100%;
+}
+.dial::before {
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:320px;
+	height:320px;
+	background-image:url(../style/1/img/light_0.png);
+	background-size:100%;
+}
+.running {
+	-webkit-animation:init 90s linear infinite;
+	animation:init 90s linear infinite
+}
+@keyframes init {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+.pointer {
+	position:absolute;left:50%;top:50%;
+	width:80px;height:100px;
+	background:url(../style/1/img/pointer.png) 0 0 no-repeat;
+	background-size:100%;
+	margin-left:-40px;
+	margin-top:-62px;
+	cursor:pointer;
+	outline:none;
+}
+.prize {
+	position:absolute;left:50%;top:50%;
+	width:280px;height:280px;
+	margin:-140px 0 0 -140px;
+	overflow:hidden;
+	border-radius:50%;
+}
+.prize li {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:140px;
+	background:no-repeat center 35%;
+	font-size:14px;
+	font-weight:700;
+	line-height:28px;
+	text-align:center;
+	color:#d31315;
+	-webkit-transform-origin:center bottom;
+	transform-origin:center bottom;
+}
+.prize li::before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin-left:-50%;
+	border-right:2px solid #d31315;
+	-webkit-transform-origin:right bottom;
+	transform-origin:right bottom;
+	-webkit-transform:rotate(30deg) skewY(30deg);
+	transform:rotate(30deg) skewY(30deg);
+}
+.prize li:nth-child(1) {
+	-webkit-transform:rotate(0deg);
+	transform:rotate(0deg);
+}
+.prize li:nth-child(2) {
+	-webkit-transform:rotate(60deg);
+	transform:rotate(60deg);
+}
+.prize li:nth-child(3) {
+	-webkit-transform:rotate(120deg);
+	transform:rotate(120deg);
+}
+.prize li:nth-child(4) {
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+.prize li:nth-child(5) {
+	-webkit-transform:rotate(240deg);
+	transform:rotate(240deg)
+}
+.prize li:nth-child(6) {
+	-webkit-transform:rotate(300deg);
+	transform:rotate(300deg);
+}
+
+.prize li>i {
+	position:absolute;top:40px;left:0;right:0;
+	width:40px;height:40px;margin:0 auto;
+	background:url(../style/1/img/gift_icos.png) 0 0 no-repeat;
+	background-size:40px;
+}
+.prize li>i.gift_2 {background-position-y:-40px;}
+.prize li>i.gift_3 {background-position-y:-80px;}
+.prize li>i.gift_4 {background-position-y:-120px;}
+	
+.times {
+	padding:16px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+}
+.times b {color:#ffcf0b;padding:0 4px;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="topbar">
+		<div class="logo"></div>
+		<div class="links">
+			<a class="btn rule dark"><em>活动规则</em></a>
+			<a class="btn my"><em>我的奖品</em></a>
+		</div>
+	</div>
+	<header id="header">
+		<h1>家庭预存有礼，最高得4999元现金</h1>
+		<div class="term_date">活动日期：1月1日~3月31日</div>
+	</header>
+	<div id="main">
+		<div class="main dial">
+			<ul class="prize running">
+				<li>
+					<i class="gift_1"></i>
+					<em>4999元</em>
+				</li>
+				<li>
+					<i class="gift_2"></i>
+					<em>流量小时包</em>
+				</li>
+				<li>
+					<i class="gift_3"></i>
+					<em>谢谢参与</em>		
+				</li>
+				<li>
+					<i class="gift_1"></i>
+					<em>1000元</em>
+				</li>
+				<li>
+					<i class="gift_4"></i>
+					<em>新春礼包</em>	
+				</li>
+				<li>
+					<i class="gift_3"></i>
+					<em>谢谢参与</em>	
+				</li>
+			</ul>
+			<div class="pointer"></div>
+		</div>
+		<div class="times">您还剩余<b>1次</b>抽奖机会</div>
+	</div>
+	<footer id="footer"></footer>
+</div>
+<div class="pop mask">
+	<div class="box">
+		<div class="header"></div>
+		<div class="main">
+        恭喜你！中奖了！
+        <p>获得1张<br><em>定向流量包优惠券</em></p>
+        </div>
+		<footer class="action">
+        	<button type="button" class="btn close">关闭</button>
+        	<a class="btn lnk" href="coupon.html">查看奖品</a>
+        </footer>
+	</div>
+</div>
+</body>
+</html>
