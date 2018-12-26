@@ -62,7 +62,6 @@ body {
 	color:#fff;
 }
 #footer {
-
 	height:100px;
 	background:url(../style/1/img/bottom_bg.png) center 0 no-repeat;
 	background-size:375px;
@@ -75,26 +74,44 @@ body {
 	background:url(../style/1/img/dial_bg.png) center center no-repeat;
 	background-size:100%;
 }
-.dial::before {
+
+.running {
+	-webkit-animation:rotating 90s linear infinite;
+	animation:rotating 90s linear infinite
+}
+@keyframes rotating {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+.light::before {
 	content:"";
 	position:absolute;
 	left:0;
 	top:0;
 	width:320px;
 	height:320px;
-	background-image:url(../style/1/img/light_0.png);
-	background-size:100%;
+	-webkit-animation:lighting 90s linear infinite;
+	animation:lighting .5s linear infinite
+}	
+.light {
+	
 }
-.running {
-	-webkit-animation:init 90s linear infinite;
-	animation:init 90s linear infinite
-}
-@keyframes init {
-	100% {
-		-webkit-transform:rotate(360deg);
-		transform:rotate(360deg);
+@keyframes lighting {
+	0% {
+		background-image:url(../style/1/img/light_0.png);
+		background-size:100%;
 	}
-}
+	50% {
+		background-image:url(../style/1/img/light_1.png);
+		background-size:100%;
+	}
+	100% {
+		background-image:url(../style/1/img/light_0.png);
+		background-size:100%;
+	}
+}	
 .pointer {
 	position:absolute;left:50%;top:50%;
 	width:80px;height:100px;
@@ -199,7 +216,7 @@ body {
 		<div class="term_date">活动日期：1月1日~3月31日</div>
 	</header>
 	<div id="main">
-		<div class="main dial">
+		<div class="main dial light">
 			<ul class="prize running">
 				<li>
 					<i class="gift_1"></i>
