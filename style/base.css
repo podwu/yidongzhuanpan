@@ -117,16 +117,17 @@ textarea.com-input {height:120px;padding:16px;}
 /*Pop-Box:0*/
 .pop {
 	display:none;position:absolute;bottom:0;left:0;right:0;z-index:10;padding:16px;
-	max-width:540px;margin:0 auto;
+	max-width:414px;margin:0 auto;
 }
 .pop .box {	
 	position:relative;z-index:99;
+	width:100%;
 	border:1px solid #ddd;
 	background-color:#fff;
 	box-shadow:0px 0px 20px rgba(0,0,0,.15);
 	color:#333;
 }
-.pop .box .btn.close {display:block;border:none;width:42px;height:42px;background:none;font-size:24px;color:#999;outline:0;}
+.pop .box>header .btn.close {display:block;border:none;width:42px;height:42px;background:none;font-size:24px;color:#999;outline:0;}
 .pop .box>header {
 	background-color:#f9f9f9;border-bottom:1px solid #eee;
 	display:-webkit-flex;
@@ -140,14 +141,14 @@ textarea.com-input {height:120px;padding:16px;}
 .pop .action {display:-webkit-flex;display:flex;}
 .pop .action .btn {
 	-webkit-flex:1;flex:1;
-	margin-right:10px;
+	margin-right:8px;
 	height:42px;line-height:42px;
 }
 .pop .action>.btn:last-child {margin:0;}
-.pop .action .btn>em {font-size:14px;color:#fff;}
-.pop.confirm .content {padding:40px 24px;text-align:center;line-height:1.45;font-size:14px;}
-.pop.confirm .content>em {padding:0 3px;color:#dc1b16;}
-.pop.confirm .action {padding:0 16px 16px;} 
+.pop .action .btn.dark>em,
+.pop .action .btn.submit>em {font-size:14px;color:#fff;}
+.pop.confirm .body {padding:24px 16px;text-align:center;line-height:1.45;font-size:14px;}
+.pop.confirm .msg>em {padding:0 4px;color:#dc1b16;}
 /*Pop-Box:1*/
 /*com-tip:0*/
 .com-tip {
@@ -172,3 +173,17 @@ textarea.com-input {height:120px;padding:16px;}
 	border-radius:4px;
 }
 /*com-tip:1*/
+/*com-table:0*/
+.com-table {width:100%;background-color:#fff;}
+.com-table th,.com-table td {
+	padding:16px;
+	text-align:left;
+	border-bottom:1px solid #eee;
+	border-left:1px solid #eee;
+	vertical-align:middle;
+}
+.com-table th {font-weight:400;color:#999;background-color:#f9f9f9;}
+.com-table th:first-child {border-left:none;}
+.com-table>tbody>tr:last-child>th,
+.com-table>tbody>tr:last-child>td {border-bottom-color:#ddd;}
+/*com-table:1*/
