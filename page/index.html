@@ -144,7 +144,7 @@
 		$(this).parents(".pop").removeClass("open");
 	});
 	$(".pop.win .btn.close").on("click",function(){
-		$(".dial>.prize").addClass("rotate");
+		//$(".dial>.prize").addClass("rotate");
 	});
 	$(".btn.rule").on("click",function(e){
 		$(".pop.rule").slideDown(200);
@@ -180,7 +180,7 @@
 				$(".dial>.prize").rotate({ 
 					duration : 4000, //转动时间 
 					angle : 0, //开始角度 
-					animateTo : 3600 + 480, //test
+					animateTo : 3600 + 400, //test
 					//easing : $.easing.easeOutSine, //动画扩展 
 					callback : function() {
 						$(".dial").removeClass("running");
